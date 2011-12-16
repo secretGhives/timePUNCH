@@ -199,15 +199,20 @@ aside > p {
 
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1010px) {
 	body {
 		overflow-x: auto;
-		background: red;
+		background-position: center 400px;
+		//background: orange;
 	}
+	#page-front {min-height: 666px;}
+	#timers {min-height: 420px;}
+	page-front h1 {margin: 149px 0 6px 0;}
+	#page-front p {margin-bottom: 69px;}
 }
 
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1020px) {
 	/*layouts larger than 900px*/
 	body {
 		overflow-x: auto;
@@ -232,20 +237,6 @@ aside > p {
 		overflow-x: auto;
 		background: blue;
 	}
-}
-	
-/*iPad styles*/
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	body {
-		overflow-x: auto;
-		background-position: center 469px;
-		//background: orange;
-	}
-	#page-front {min-height: 666px;}
-	#timers {min-height: 480px;}
-	page-front h1 {margin: 149px 0 6px 0;}
-	#page-front p {margin-bottom: 69px;}
 }
 
 /* @end */
