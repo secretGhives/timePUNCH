@@ -1,0 +1,52 @@
+// Default font
+@mixin typeface {
+  // From: Better Helvetica Font Stack http://j.mp/9t6O6Z
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #404040;
+}
+
+$georgia: Georgia, Cambria, "Times New Roman", Times, serif;
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+$verdana: Verdana, Geneva, sans-serif;
+
+
+/* ICONS FOR THE GENERAL UI */
+@font-face {
+    font-family: 'Guifxv2TransportsRegular';
+    src: url('../../../fonts/guifx_v2_transports-webfont.eot');
+    src: url('../../../fonts/guifx_v2_transports-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/guifx_v2_transports-webfont.woff') format('woff'),
+         url('../../../fonts/guifx_v2_transports-webfont.ttf') format('truetype'),
+         url('../../../fonts/guifx_v2_transports-webfont.svg#Guifxv2TransportsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'WWDigitalRegular';
+    src: url('../../../fonts/wwdigital-webfont.eot');
+    src: url('../../../fonts/wwdigital-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/wwdigital-webfont.woff') format('woff'),
+         url('../../../fonts/wwdigital-webfont.ttf') format('truetype'),
+         url('../../../fonts/wwdigital-webfont.svg#WWDigitalRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'WellbutrinRegular';
+    src: url('../../../fonts/welbut__-webfont.eot');
+    src: url('../../../fonts/welbut__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/welbut__-webfont.woff') format('woff'),
+         url('../../../fonts/welbut__-webfont.ttf') format('truetype'),
+         url('../../../fonts/welbut__-webfont.svg#WellbutrinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.s-btn { font-family: 'Guifxv2TransportsRegular'; padding: 3px; margin-right: 3px; text-decoration: none; cursor: pointer; @extend .unselectable;}

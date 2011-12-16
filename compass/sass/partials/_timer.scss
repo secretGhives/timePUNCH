@@ -1,0 +1,129 @@
+/* @group Timer */
+#timers { text-align: center; }
+.timer-wrap {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: left;
+	.timer {
+		@include display-box;
+		@include box-align(justify);
+		@include box-orient(horizontal);
+		@include box-pack(center);
+		@include box-flex(1);
+		> div {
+			border-bottom: 1px dashed #ddd;
+			@include transition (all, 0.3s, ease-in-out);
+		}
+		margin: 0; padding: 0;
+		height: 69px;
+		max-height: 69px;
+		position: relative;
+		overflow: hidden;
+		&:hover .timer-qr { visibility: visible; }
+		.timer-qr { visibility: hidden; }
+		.timer-status { position: relative; margin: 0; padding: 0; }
+
+		/* timer status */
+		.timer-status {
+			@include border-radius(2px);
+			@include box-shadow(0 2px 0 0 rgba(255,255,255,.06) inset,0 2px 3px 0 rgba(0,0,0,.2)); 
+			&.online { 
+			background-color:#5FB000;
+			border:1px solid #488500;
+			}
+			&.offline { 
+			background-color:#3e3e3e;
+			border:1px solid #3f3f3f;
+			}
+			&.connecting { 
+			background-color:#4D7BD6;
+			border:1px solid #2D53AF;
+			}
+			&.error { 
+			background-color:#F47C20;
+			border:1px solid #D45500;
+			}
+		}
+		/* timer counter */
+		.timer-counter { 
+			font-family: 'WWDigitalRegular', sans-serif;
+			padding: 0 13px; font-size: 32px; line-height: 62px;
+			label { z-index: 1; position: relative; letter-spacing: normal;
+				&:after { font-size: 13px; }
+			}
+			.days {
+				&:after { content: " days"; }
+			}
+			.hours {
+				&:after { content: " hrs"; }
+			}
+			.mins {
+				&:after { content: " min"; }
+			}
+			.secs {
+				&:after { content: " sec"; }
+			}
+			.milsecs { }
+		}
+		/* timer buttons */
+		.timer-button { 
+			background-color: rgba(255,255,255,0.2);
+			width: 69px;
+			padding: 5px 0;
+			@include box-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
+			.border {
+				margin: 0 auto;
+				height: 59px;
+				width: 59px;
+				display: block;
+				background-color: #eee;
+				@include box-shadow(0px 1px 1px rgba(255, 255, 255, 0.6));
+				@include border-radius(32px);
+			}
+			.start, .history {
+				font-family: 'Guifxv2TransportsRegular';
+				//background: rgba(69,69,69,0.3);
+				width: 42px;
+				height: 42px;
+				@include border-radius(22px);
+				position: relative;
+				top: 8px;
+				left: 8px;
+				border: 1px solid #bbb;
+				overflow: hidden;
+				color: #666;
+				line-height: 29px;
+				&:active, &.active {
+					@include transform(scale(0.97));
+					color: #999;
+				}
+			}
+		}
+	}
+	.timer-history {
+		@include display-box;
+		@include box-align(center);
+		@include box-orient(vertical);
+		@include box-pack(center);
+		@include box-flex(1);
+		font-size: 13px;
+		line-height: 32px;
+		table {
+			width: 100%; background: #f9f9f9;
+			tr {
+				border-bottom: 1px dashed #ddd;
+				@include transition (all, 0.3s, ease-in-out);
+				label {padding: 0 9px;}
+			}
+			.s-btn {
+				border: 0px;
+				padding: 0;
+				margin: 0;
+				background: transparent;
+			}
+		}
+
+	}
+}
+/* @end */
