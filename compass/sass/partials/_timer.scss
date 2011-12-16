@@ -102,11 +102,11 @@
 		}
 	}
 	.timer-history {
-		@include display-box;
-		@include box-align(center);
-		@include box-orient(vertical);
-		@include box-pack(center);
-		@include box-flex(1);
+		// @include display-box;
+		// @include box-align(center);
+		// @include box-orient(vertical);
+		// @include box-pack(center);
+		// @include box-flex(1);
 		font-size: 13px;
 		line-height: 32px;
 		table {

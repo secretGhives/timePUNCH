@@ -103,12 +103,6 @@ body {
 	overflow-x: hidden;
 }
 
-@media screen and (max-width: 960px) {
-	body {
-		overflow-x: auto;
-	}
-}
-
 header,
 section article,
 footer > hgroup {
@@ -177,3 +171,76 @@ aside > p {
 		height: 100%;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*layouts smaller than 600px, iPhone and mobiles*/
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px)  {
+
+	body {
+		overflow-x: auto;
+		background: purple;
+	}
+
+}
+
+@media screen and (max-width: 960px) {
+	body {
+		overflow-x: auto;
+		background: red;
+	}
+}
+
+
+@media screen and (min-width: 960px) {
+	/*layouts larger than 900px*/
+	body {
+		overflow-x: auto;
+		background-position: center 747px;
+	}
+	#page-front {min-height: 940px;}
+	#timers {min-height: 840px;}
+	#page-front h1 {margin: 269px 0 6px 0;}
+	#page-front p {margin-bottom: 96px;}
+}
+
+@media screen and (min-width: 1350px) {
+//background: pink;
+}
+@media screen and (min-width: 1500px) {
+//background: red;
+}
+	
+/*Just iPhone*/
+@media only screen and (max-device-width: 480px) {
+	body {
+		overflow-x: auto;
+		background: blue;
+	}
+}
+	
+/*iPad styles*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	body {
+		overflow-x: auto;
+		background: orange;
+	}
+}
+
+/* @end */
