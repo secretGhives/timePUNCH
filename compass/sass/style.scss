@@ -239,8 +239,13 @@ aside > p {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	body {
 		overflow-x: auto;
-		background: orange;
+		background-position: center 469px;
+		//background: orange;
 	}
+	#page-front {min-height: 666px;}
+	#timers {min-height: 480px;}
+	page-front h1 {margin: 149px 0 6px 0;}
+	#page-front p {margin-bottom: 69px;}
 }
 
 /* @end */
